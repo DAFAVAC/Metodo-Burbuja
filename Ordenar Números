@@ -1,0 +1,43 @@
+//DAFAVAC
+//Ordenar numeros de un array
+
+//generador de numeros aleatorios
+var des=[];
+for(var i=1 ; i<=100 ; i++){
+ 
+	     var numaleatorio=Math.floor(Math.random()*i);
+ 
+		des.push(numaleatorio);
+
+		}
+//ordenar numeros
+	function burbuja(des)
+	{
+		for(var i=1;i<des.length;i++)
+		{
+			for(var j=0;j<(des.length-i);j++)
+			{
+				if(des[j]>des[j+1])
+				{
+					k=des[j+1];
+					des[j+1]=des[j];
+					des[j]=k;
+				}
+			}
+		}
+		return des;
+	}
+ 
+	console.log("Valores Iniciales");
+	for(var i=0;i<des.length;i++)
+	{
+		console.log(des[i]);
+	}
+ 
+	order=burbuja(des);
+ 
+	console.log("Valores ordenados");
+	for(i=0;i<order.length;i++)
+	{
+		console.log(order[i]);
+	}
